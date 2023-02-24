@@ -1,0 +1,44 @@
+project:
+  type: book
+
+book:
+  title: "TensorFlow 2 for Deep Learning"
+  author: "Hanzholah Shobri, Tria Rahmat M"
+  date: "24/02/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: "[Types of Machine Learning Problems]{style=\"font-weight: bold; color: #555555\"}"
+      chapters:
+        - notebooks/01a-basic-regression.ipynb
+        - notebooks/01b-basic-classification.ipynb
+    - part: "[Deep Learning Case Studies]{style=\"font-weight: bold; color: #555555\"}"
+      chapters:
+        - notebooks/02a-mnist.ipynb
+        - notebooks/02b-imdb.ipynb
+        - notebooks/02c-reuters.ipynb
+        - notebooks/02d-boston.ipynb
+    - part: "[Preparing Data for Deep Learning]{style=\"font-weight: bold; color: #555555\"}"
+      chapters: 
+        - notebooks/03a-handling-text.ipynb
+        - notebooks/03b-handling-images.ipynb
+        - notebooks/03c-handling-time-series.ipynb
+    # - part:
+    #   chapters:
+    #     - notebooks/04a-tf-variables-and-constants.ipynb
+    #     - notebooks/04b-gradient-tapes-API.ipynb
+    #     - notebooks/04c-stochastic-gradient-descent.ipynb
+    #     - notebooks/04d-dense-layers.ipynb
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: united
+  pdf:
+    documentclass: scrreprt
+
+
+
