@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TensorFlow 2 for Deep Learning - Introduction</title>
+<title>Deep Learning with TensorFlow 2 - Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,7 +30,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./notebooks/01a-basic-regression.html" rel="next">
+<link href="./notebooks/01a-basic-workflow.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -102,7 +83,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TensorFlow 2 for Deep Learning</a> 
+      <a href="./">Deep Learning with TensorFlow 2</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -114,7 +95,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -124,7 +105,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Types of Machine Learning Problems</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Basic Usage of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -132,19 +113,24 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/01a-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></a>
+  <a href="./notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/01b-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Classification Problems</span></a>
+  <a href="./notebooks/01b-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/01c-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dealing with Classification Problems</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Deep Learning Case Studies</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Use Cases of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -152,29 +138,29 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">MNIST</span></a>
+  <a href="./notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MNIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">IMDB</span></a>
+  <a href="./notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IMDB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Reuters</span></a>
+  <a href="./notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Reuters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
+  <a href="./notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for Deep Learning</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -182,17 +168,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
+  <a href="./notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
+  <a href="./notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
+  <a href="./notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
   </div>
 </li>
       </ul>
@@ -212,7 +198,15 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-concepts-of-artificial-intelligence-machine-learning-and-deep-learning" id="toc-the-concepts-of-artificial-intelligence-machine-learning-and-deep-learning" class="nav-link active" data-scroll-target="#the-concepts-of-artificial-intelligence-machine-learning-and-deep-learning">The concepts of Artificial Intelligence, Machine Learning, and Deep Learning</a></li>
+  <li><a href="#an-introduction-to-tensorflow-2.0-and-keras-libraries" id="toc-an-introduction-to-tensorflow-2.0-and-keras-libraries" class="nav-link" data-scroll-target="#an-introduction-to-tensorflow-2.0-and-keras-libraries">An Introduction to TensorFlow 2.0 and Keras Libraries</a></li>
+  <li><a href="#how-will-you-learn-deep-learning-by-using-this-book" id="toc-how-will-you-learn-deep-learning-by-using-this-book" class="nav-link" data-scroll-target="#how-will-you-learn-deep-learning-by-using-this-book">How Will You Learn Deep Learning by Using This Book?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,15 +228,45 @@ div.csl-indent {
 
 </header>
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<p>Deep learning is a branch of artificial intelligence that uses neural networks to learn from data and perform certain tasks. Many creative and innnovative solutions to human problems have been solved by deep learning techniques. Hence, the skills to use deep learning in any domain is important in the era where computational capabilty and data availability is continally increasing. This book consists of the application of several key techniques in deep learning to deal with complex data structures.</p>
+<p>If you are familiar with Python and want to learn TensorFlow by solving real-world problems, this book is for you. You will learn how to use TensorFlow to build machine learning models for various domains, such as computer vision, natural language processing, and more. You will also get hands-on experience with TensorFlow through case studies and practical examples that show you how to apply the concepts and techniques in your own projects. Every relevant concept is introduced gradually, so it is recommended to read the book from the first chapter to the end.</p>
+<section id="the-concepts-of-artificial-intelligence-machine-learning-and-deep-learning" class="level3">
+<h3 class="anchored" data-anchor-id="the-concepts-of-artificial-intelligence-machine-learning-and-deep-learning">The concepts of Artificial Intelligence, Machine Learning, and Deep Learning</h3>
+<p>To understand what deep learning is, we need to also look at the definition of machine learning and deep learning. In principle, deep learning is a subset of machine learning, and machine learning is a subset of artificial intelligence.</p>
+<p>Artificial intelligence (AI) is a broad term that refers to any system or software that can perform tasks that normally require human intelligence, such as reasoning, decision making, problem solving, natural language processing, and computer vision. Machine learning (ML) is a subset of AI that focuses on creating systems or software that can learn patterns or rules from data and improve their performance without explicit programming or human intervention.</p>
+<p>Deep learning (DL) is a subset of ML that uses artificial neural networks (ANNs) to model complex and nonlinear relationships between inputs and outputs. In contrast to traditional machine learning that requires manual feature engineering to extract relevant information, deep learning uses multiple intermediate representations of the data to extract features automatically from raw data.</p>
+<p>An illustration by Data Iku on the relationship between AI, ML, and DL is presented below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.dataiku.com/hs-fs/hubfs/AI-ML-DL-graphic.png?width=810&amp;name=AI-ML-DL-graphic.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">DL is a subset of ML, and ML is a subset of AI</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="an-introduction-to-tensorflow-2.0-and-keras-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="an-introduction-to-tensorflow-2.0-and-keras-libraries">An Introduction to TensorFlow 2.0 and Keras Libraries</h3>
+<p>Tensorflow 2 and Keras are two powerful frameworks for building and deploying machine learning solutions, especially for deep learning. Tensorflow 2 is the premier open-source platform for developing, training, and deploying deep learning models at scale. Keras is the high-level API of Tensorflow 2, which provides an easy and intuitive way to design, fit, evaluate, and use deep learning models with just a few lines of code.</p>
+<p>Tensorflow 2 and Keras have many advantages over other frameworks, such as:</p>
+<ul>
+<li>They support multiple backends, devices, and languages, allowing you to run your code on CPUs, GPUs, TPUs, and even mobile devices.</li>
+<li>They offer a rich set of tools and libraries for data processing, visualization, debugging, optimization, and deployment.</li>
+<li>They enable you to use both the sequential and functional APIs to create simple or complex models with different architectures and layers.</li>
+<li>They allow you to leverage the power of custom layers, custom training loops, custom callbacks, and custom metrics to customize your model according to your needs.</li>
+<li>They integrate seamlessly with other popular libraries and frameworks, such as NumPy, SciPy, Pandas, Scikit-learn, PyTorch, and more.</li>
+</ul>
+<p>Tensorflow 2 and Keras are not only frameworks but also communities of developers, researchers, and practitioners who share their knowledge and experience through blogs, tutorials, books, courses, forums, and events. By using Tensorflow 2 and Keras, you can join this vibrant community and learn from the best in the field.</p>
+</section>
+<section id="how-will-you-learn-deep-learning-by-using-this-book" class="level3">
+<h3 class="anchored" data-anchor-id="how-will-you-learn-deep-learning-by-using-this-book">How Will You Learn Deep Learning by Using This Book?</h3>
+<p>This book exclusively uses TensorFlow 2, as well as its high-level API or Keras, to build and train a deep learning model. Other libraries are also used for preparing the data or making visualisation. To practice with the code in this book, readers could access the source notebook or copy and paste each code manually. There are three parts of the book.</p>
+<ul>
+<li><strong>Part 1: Basic Usage of TensorFlow 2</strong>. This part contains the basic workflow to build a model that is used in this book and how to implement TensorFlow 2 according to the workflow for regression and classification problems using dummy data.</li>
+<li><strong>Part 2: Use Cases of TensorFlow 2</strong>. This part demonstrates several applications of some important techniques in machine learning and TensorFlow 2 to four use cases using datasets provided by TensorFlow 2 library.</li>
+<li><strong>Part 3: Preparing Data for TensorFlow 2</strong>. This part goes beyond built-in dataset and shows how to handle messy, real-world data in different formats (images, texts, and time series data) into inputs for TensorFlow 2 deep learning models.</li>
+</ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="doc-biblioentry">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -381,12 +405,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./notebooks/01a-basic-regression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./notebooks/01a-basic-workflow.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

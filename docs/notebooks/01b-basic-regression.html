@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Hanzholah Shobri">
-<meta name="dcterms.date" content="2023-02-28">
 
-<title>TensorFlow 2 for Deep Learning - 1&nbsp; TensorFlow 2 for Regression Problems</title>
+<title>Deep Learning with TensorFlow 2 - 2&nbsp; Dealing with Regression Problems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,8 +93,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notebooks/01b-basic-classification.html" rel="next">
-<link href="../intro.html" rel="prev">
+<link href="../notebooks/01c-basic-classification.html" rel="next">
+<link href="../notebooks/01a-basic-workflow.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -139,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -152,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">TensorFlow 2 for Deep Learning</a> 
+      <a href="../">Deep Learning with TensorFlow 2</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -169,17 +167,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../preface.html" class="sidebar-item-text sidebar-link">Preface</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Types of Machine Learning Problems</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Basic Usage of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -187,19 +180,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01a-basic-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></a>
+  <a href="../notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01b-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Classification Problems</span></a>
+  <a href="../notebooks/01b-basic-regression.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/01c-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dealing with Classification Problems</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Deep Learning Case Studies</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Use Cases of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -207,29 +205,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">MNIST</span></a>
+  <a href="../notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MNIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">IMDB</span></a>
+  <a href="../notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IMDB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Reuters</span></a>
+  <a href="../notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Reuters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
+  <a href="../notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for Deep Learning</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -237,17 +235,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
+  <a href="../notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
+  <a href="../notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
+  <a href="../notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
   </div>
 </li>
       </ul>
@@ -271,17 +269,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="toc-section-number">1.1</span>  Setup</a></li>
-  <li><a href="#generate-random-data" id="toc-generate-random-data" class="nav-link" data-scroll-target="#generate-random-data"><span class="toc-section-number">1.2</span>  Generate Random Data</a></li>
-  <li><a href="#a-very-simple-tf2-model" id="toc-a-very-simple-tf2-model" class="nav-link" data-scroll-target="#a-very-simple-tf2-model"><span class="toc-section-number">1.3</span>  A Very Simple <code>TF2</code> Model</a>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup"><span class="toc-section-number">2.1</span>  Setup</a></li>
+  <li><a href="#generate-random-data" id="toc-generate-random-data" class="nav-link" data-scroll-target="#generate-random-data"><span class="toc-section-number">2.2</span>  Generate Random Data</a></li>
+  <li><a href="#a-very-simple-tf2-model" id="toc-a-very-simple-tf2-model" class="nav-link" data-scroll-target="#a-very-simple-tf2-model"><span class="toc-section-number">2.3</span>  A Very Simple <code>TF2</code> Model</a>
   <ul class="collapse">
-  <li><a href="#defining-the-model" id="toc-defining-the-model" class="nav-link" data-scroll-target="#defining-the-model"><span class="toc-section-number">1.3.1</span>  Defining the model</a></li>
-  <li><a href="#training-the-model" id="toc-training-the-model" class="nav-link" data-scroll-target="#training-the-model"><span class="toc-section-number">1.3.2</span>  Training the model</a></li>
-  <li><a href="#evaluating-the-model" id="toc-evaluating-the-model" class="nav-link" data-scroll-target="#evaluating-the-model"><span class="toc-section-number">1.3.3</span>  Evaluating the model</a></li>
+  <li><a href="#defining-the-model" id="toc-defining-the-model" class="nav-link" data-scroll-target="#defining-the-model"><span class="toc-section-number">2.3.1</span>  Defining the model</a></li>
+  <li><a href="#training-the-model" id="toc-training-the-model" class="nav-link" data-scroll-target="#training-the-model"><span class="toc-section-number">2.3.2</span>  Training the model</a></li>
+  <li><a href="#evaluating-the-model" id="toc-evaluating-the-model" class="nav-link" data-scroll-target="#evaluating-the-model"><span class="toc-section-number">2.3.3</span>  Evaluating the model</a></li>
   </ul></li>
-  <li><a href="#dealing-with-non-linearity" id="toc-dealing-with-non-linearity" class="nav-link" data-scroll-target="#dealing-with-non-linearity"><span class="toc-section-number">1.4</span>  Dealing with Non-linearity</a></li>
-  <li><a href="#going-deeper-by-using-more-layers" id="toc-going-deeper-by-using-more-layers" class="nav-link" data-scroll-target="#going-deeper-by-using-more-layers"><span class="toc-section-number">1.5</span>  Going Deeper by Using More Layers</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="toc-section-number">1.6</span>  Conclusion</a></li>
+  <li><a href="#dealing-with-non-linearity" id="toc-dealing-with-non-linearity" class="nav-link" data-scroll-target="#dealing-with-non-linearity"><span class="toc-section-number">2.4</span>  Dealing with Non-linearity</a></li>
+  <li><a href="#going-deeper-by-using-more-layers" id="toc-going-deeper-by-using-more-layers" class="nav-link" data-scroll-target="#going-deeper-by-using-more-layers"><span class="toc-section-number">2.5</span>  Going Deeper by Using More Layers</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="toc-section-number">2.6</span>  Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -290,31 +288,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">Tensorflow</div>
-    <div class="quarto-category">Deep Learning</div>
-  </div>
-  </div>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Hanzholah Shobri </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 28, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -324,8 +305,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <p>TensorFlow 2 (TF2) provides a whole set of tools to implement machine learning to a wide range of problems, from preparing the data to deploying a model. In this post, I demonstrate how to use the package to build a regression model predicting continuous numerical values based on input data.</p>
 <p>The objective of this demo is to show you the main elements of working with a TF2 model to tackle regression problems.</p>
-<section id="setup" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">1.1</span> Setup</h2>
+<section id="setup" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">2.1</span> Setup</h2>
 <p>Important libraries are loaded, namely <code>tensorflow</code>, <code>numpy</code> to manipulate data, <code>pandas</code> to deal with table, and <code>seaborn</code> to create visualisation. As part of the setup, I also clean the <code>TF2</code> environment with <code>clear_session</code> function and set seed for random number generation using <code>set_random_seed</code> function.</p>
 <p>For the visualisation, I attempted to use the <code>seaborn.objects</code> interface. The reason for this is that I am familiar with the <code>ggplot2</code> package in <code>R</code> when conducting data analysis, and I found that there is some similarity in both approach of creating a plot. For those who aren’t familiar with <code>ggplot2</code> package, it employs the concept of <a href="https://vita.had.co.nz/papers/layered-grammar.html">layered grammar of graphics</a> allowing you to describe any plots in a more structured way which result in more convenient and consistent code. You can see the documentations for the <code>seaborn.objects</code> interface <a href="https://seaborn.pydata.org/tutorial/objects_interface">here</a> and the <code>ggplot2</code> package <a href="https://ggplot2.tidyverse.org/">here</a>.</p>
 <div class="cell" data-execution_count="1">
@@ -339,8 +320,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tf.keras.utils.set_random_seed(<span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="generate-random-data" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="generate-random-data"><span class="header-section-number">1.2</span> Generate Random Data</h2>
+<section id="generate-random-data" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="generate-random-data"><span class="header-section-number">2.2</span> Generate Random Data</h2>
 <p>For the sample problem, I generated a 1000 observations of random number with two independent variables <span class="math inline">\(x_0\)</span> and <span class="math inline">\(x_1\)</span>. The target for prediction is calculated using simple formula below.</p>
 <p><span class="math display">\[
     y = f(x) = 0.2 \times x_0 + 2.8 \times x_1 + \epsilon
@@ -363,10 +344,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="a-very-simple-tf2-model" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="a-very-simple-tf2-model"><span class="header-section-number">1.3</span> A Very Simple <code>TF2</code> Model</h2>
-<section id="defining-the-model" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="defining-the-model"><span class="header-section-number">1.3.1</span> Defining the model</h3>
+<section id="a-very-simple-tf2-model" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="a-very-simple-tf2-model"><span class="header-section-number">2.3</span> A Very Simple <code>TF2</code> Model</h2>
+<section id="defining-the-model" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="defining-the-model"><span class="header-section-number">2.3.1</span> Defining the model</h3>
 <p>Defining a <code>TF2</code> model can be accomplished easily by calling the <code>Sequential</code> method, followed by <code>add</code>ing any types and number of layers. As the problem is very straightforward, tackling this should be relatively easy. For this reason, the model I defined here is very simple with only one <code>Dense</code> layer with one perceptron unit. In addition, we need to define the <code>input_shape</code> so that the model can determine the number of parameters it requires to predict all inputs. The <code>summary</code> method allows you to see the architecture of the model.</p>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> tf.keras.models.Sequential()</span>
@@ -391,8 +372,8 @@ _________________________________________________________________</code></pre>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(optimizer <span class="op">=</span> <span class="st">"sgd"</span>, loss <span class="op">=</span> <span class="st">"mse"</span>, metrics <span class="op">=</span> [<span class="st">"mae"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="training-the-model" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="training-the-model"><span class="header-section-number">1.3.2</span> Training the model</h3>
+<section id="training-the-model" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="training-the-model"><span class="header-section-number">2.3.2</span> Training the model</h3>
 <p>Training can be done using <code>fit</code> method. The process is done after 100 <code>epochs</code> or cycles of the model updating its parameters based on input data. The <code>verbose</code> parameter that equals 0 means that the training will not print any information.</p>
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>history <span class="op">=</span> model.fit(X_train, y_train, epochs <span class="op">=</span> <span class="dv">100</span>, verbose <span class="op">=</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -477,14 +458,14 @@ _________________________________________________________________</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="01a-basic-regression_files/figure-html/cell-10-output-1.png" width="751" height="273" class="figure-img"></p>
+<p><img src="01b-basic-regression_files/figure-html/cell-10-output-1.png" width="751" height="273" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="evaluating-the-model" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="evaluating-the-model"><span class="header-section-number">1.3.3</span> Evaluating the model</h3>
+<section id="evaluating-the-model" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="evaluating-the-model"><span class="header-section-number">2.3.3</span> Evaluating the model</h3>
 <p>Finally, we can check the model’s performance on the test dataset. The <code>evaluate</code> method allows the users to see how the model perform when predicting unseen data. The model seems to do good in predicting the actual output based on the MSE and MAE.</p>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mse, mae <span class="op">=</span> model.evaluate(X_test, y_test, verbose <span class="op">=</span> <span class="dv">0</span>)</span>
@@ -498,8 +479,8 @@ Mean Absolute Error: 0.77</code></pre>
 </div>
 </section>
 </section>
-<section id="dealing-with-non-linearity" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="dealing-with-non-linearity"><span class="header-section-number">1.4</span> Dealing with Non-linearity</h2>
+<section id="dealing-with-non-linearity" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="dealing-with-non-linearity"><span class="header-section-number">2.4</span> Dealing with Non-linearity</h2>
 <p>It is well known that deep learning models are good for high dimensional and complex data. To illustrate the capability of a model in dealing with that type of data, I slightly modified the problem by squaring <code>x_1</code>, giving a non-linear property to the data. The final formula is presented below.</p>
 <p><span class="math display">\[
     y = f(x) = 0.2 \times x_0 + 2.8 \times x_1^2 + \epsilon
@@ -549,7 +530,7 @@ Mean Absolute Error: 0.77</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="01a-basic-regression_files/figure-html/cell-13-output-1.png" width="751" height="273" class="figure-img"></p>
+<p><img src="01b-basic-regression_files/figure-html/cell-13-output-1.png" width="751" height="273" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -565,8 +546,8 @@ Mean Absolute Error: 2.75</code></pre>
 </div>
 </div>
 </section>
-<section id="going-deeper-by-using-more-layers" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="going-deeper-by-using-more-layers"><span class="header-section-number">1.5</span> Going Deeper by Using More Layers</h2>
+<section id="going-deeper-by-using-more-layers" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="going-deeper-by-using-more-layers"><span class="header-section-number">2.5</span> Going Deeper by Using More Layers</h2>
 <p>As the name suggests, Deep Learning techniques leverages several intermediate representation of the data before finally decide what value to assign for any given input. This supports finding complex patterns that are usually inherent in real world data.</p>
 <p>The previous model is modified simply by <code>add</code>ing more <code>Dense</code> layers and increasing the number of the units. The <code>activation</code> function in a model is crucial for capturing non-linearity. The <code>relu</code> activation function is a function that gives either a positive value or zero which is suprisingly effective for balancing the trade-offs between finding non-linear pattern and efficient computation. As each subsequent layer can determine the number of parameters required through inferring the number of units from the previous layer, <code>input_shape</code> is only defined for the first layer.</p>
 <div class="cell" data-execution_count="14">
@@ -622,7 +603,7 @@ _________________________________________________________________</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="01a-basic-regression_files/figure-html/cell-16-output-1.png" width="751" height="273" class="figure-img"></p>
+<p><img src="01b-basic-regression_files/figure-html/cell-16-output-1.png" width="751" height="273" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -638,8 +619,8 @@ Mean Absolute Error: 0.82</code></pre>
 </div>
 </div>
 </section>
-<section id="conclusion" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.6</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.6</span> Conclusion</h2>
 <p>In this post, I demonstrate how to leverage a small subset of TensorFlow 2 capabilities to deal with artificial datasets. Even though here only includes problems with structured data with well defined problems and boundaries, Deep Learning model in essence allows anyone to do Machine Learning for highly unstructured data such as images and texts.</p>
 
 
@@ -781,13 +762,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="../notebooks/01a-basic-workflow.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notebooks/01b-basic-classification.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Classification Problems</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notebooks/01c-basic-classification.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dealing with Classification Problems</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

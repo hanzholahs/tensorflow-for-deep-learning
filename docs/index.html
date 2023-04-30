@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Hanzholah Shobri, Tria Rahmat M">
-<meta name="dcterms.date" content="2024-12-02">
 
-<title>TensorFlow 2 for Deep Learning</title>
+<title>Deep Learning with TensorFlow 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">TensorFlow 2 for Deep Learning</h1>
+      <h1 class="quarto-secondary-nav-title">Deep Learning with TensorFlow 2</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -84,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TensorFlow 2 for Deep Learning</a> 
+      <a href="./">Deep Learning with TensorFlow 2</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -96,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">Welcome</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -106,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Types of Machine Learning Problems</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Basic Usage of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -114,19 +112,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/01a-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Regression Problems</span></a>
+  <a href="./notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/01b-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">TensorFlow 2 for Classification Problems</span></a>
+  <a href="./notebooks/01b-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/01c-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dealing with Classification Problems</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Deep Learning Case Studies</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true"><span style="font-weight: bold; color: #555555">Use Cases of TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -134,29 +137,29 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">MNIST</span></a>
+  <a href="./notebooks/02a-mnist.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">MNIST</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">IMDB</span></a>
+  <a href="./notebooks/02b-imdb.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IMDB</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Reuters</span></a>
+  <a href="./notebooks/02c-reuters.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Reuters</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
+  <a href="./notebooks/02d-boston.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Boston Housing</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for Deep Learning</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true"><span style="font-weight: bold; color: #555555">Preparing Data for TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -164,26 +167,21 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
+  <a href="./notebooks/03a-handling-text.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Text Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
+  <a href="./notebooks/03b-handling-images.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Image Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
+  <a href="./notebooks/03c-handling-time-series.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handling Time Series Data</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">Summary</a>
-  </div>
-</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
@@ -198,7 +196,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <ul class="collapse">
+  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -207,26 +210,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">TensorFlow 2 for Deep Learning</h1>
+<h1 class="title d-none d-lg-block">Deep Learning with TensorFlow 2</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Hanzholah Shobri, Tria Rahmat M </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 2, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -234,12 +225,29 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<section id="welcome" class="level1 unnumbered">
+<h1 class="unnumbered">Welcome</h1>
+<p>Welcome to for <strong>Deep Learning using TensorFlow 2</strong>, a book that will show you how to use TensorFlow 2 to build and train your own models. In this book, you will learn how to use TensorFlow 2 and its high-level API, Keras, to implement various deep learning techniques, such as artificial neural networks, convolutional neural networks, recurrent neural networks, and more. In addition, several approaches to deal with different types of data, such as image, text, and time series data, will be discussed. You will learn the fundamental of TensorFlow 2 for use cases in some of the most popular and challenging domains of deep learning, which are computer vision, natural language processing, and time series data.</p>
+<p>This book is designed for beginners who want to learn TensorFlow 2 from scratch by practicing the techniques on practical examples and projects. Whether you are new to TensorFlow or have some experience with it, this book will help you master the essential skills and concepts you need to create effective solutions for real-world problems. Nevertheless, you are assumed to have some backgrounds in Python programming. Each chapter provides a brief introduction to the theory behind each technique, followed by a step-by-step guide on how to implement it using TensorFlow 2, Keras, and other relevant libraries.</p>
+<p>By the end of this book, you will have a solid foundation in TensorFlow 2 and deep learning, and you will be able to use your skills and knowledge to create your own projects or advance your career in this exciting and fast-growing field.</p>
+<section id="collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
+<p>This book is <strong>currently under development</strong>. The 1source code for this website is available on <a href="https://github.com/hanzholahs/tensorflow-for-deep-learning">GitHub</a>. We welcome any contributions or feedback from other developers who are interested in this project. If you find any errors or typos, please feel free to open an issue or a pull request. Thank you for your support and collaboration.</p>
+</section>
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<ol type="1">
+<li><p><strong>Hanzholah Shobri</strong>, a Researcher at Bank Indonesia. He hold a bachelor’s degree in Industrial Engineering from Universitas Gadjah Mada, Yogyakarta. (contacts: <a href="mailto:hanzholahs@gmail.com">email</a>, <a href="https://github.com/hanzholahs">github</a>, <a href="https://twitter.com/hanzholah">twitter</a>)</p></li>
+<li><p><strong>Tria Rahmat Mauludin</strong>, a Researcher at Bank Indonesia. He hold a bachelor’s degree in Mathematics from Insitut Teknologi Bandung, Bandung. (contacts: <a href="mailto:triarahmatm@gmail.com">email</a>, <a href="https://github.com/triarm">github</a>)</p></li>
+</ol>
+</section>
+<section id="license" class="level3">
+<h3 class="anchored" data-anchor-id="license">License</h3>
+<p>This book is licensed to you under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+<p>The code samples in this book are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 1.0 Universal (CC0 1.0)</a>, i.e.&nbsp;public domain.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
