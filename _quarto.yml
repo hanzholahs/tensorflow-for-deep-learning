@@ -3,23 +3,22 @@ project:
   output-dir: docs
 
 book:
-  title: "TensorFlow 2 for Deep Learning"
-  author: "Hanzholah Shobri, Tria Rahmat M"
-  date: "24/02/2023"
+  title: "Deep Learning with TensorFlow 2"
   chapters:
     - index.qmd
     - intro.qmd
-    - part: "[Types of Machine Learning Problems]{style=\"font-weight: bold; color: #555555\"}"
+    - part: "[Basic Usage of TensorFlow 2]{style=\"font-weight: bold; color: #555555\"}"
       chapters:
-        - notebooks/01a-basic-regression.ipynb
-        - notebooks/01b-basic-classification.ipynb
-    - part: "[Deep Learning Case Studies]{style=\"font-weight: bold; color: #555555\"}"
+        - notebooks/01a-basic-workflow.qmd
+        - notebooks/01b-basic-regression.ipynb
+        - notebooks/01c-basic-classification.ipynb
+    - part: "[Use Cases of TensorFlow 2]{style=\"font-weight: bold; color: #555555\"}"
       chapters:
         - notebooks/02a-mnist.ipynb
         - notebooks/02b-imdb.ipynb
         - notebooks/02c-reuters.ipynb
         - notebooks/02d-boston.ipynb
-    - part: "[Preparing Data for Deep Learning]{style=\"font-weight: bold; color: #555555\"}"
+    - part: "[Preparing Data for TensorFlow 2]{style=\"font-weight: bold; color: #555555\"}"
       chapters: 
         - notebooks/03a-handling-text.ipynb
         - notebooks/03b-handling-images.ipynb
@@ -30,7 +29,7 @@ book:
     #     - notebooks/04b-gradient-tapes-API.ipynb
     #     - notebooks/04c-stochastic-gradient-descent.ipynb
     #     - notebooks/04d-dense-layers.ipynb
-    - summary.qmd
+    # - summary.qmd
     - references.qmd
 
 bibliography: references.bib
