@@ -1,5 +1,25 @@
-# Preface {.unnumbered}
+# Welcome {.unnumbered}
 
-This is a Quarto book.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Welcome to for **Deep Learning using TensorFlow 2**, a book that will show you how to use TensorFlow 2 to build and train your own models. In this book, you will learn how to use TensorFlow 2 and its high-level API, Keras, to implement various deep learning techniques, such as artificial neural networks, convolutional neural networks, recurrent neural networks, and more. In addition, several approaches to deal with different types of data, such as image, text, and time series data, will be discussed. You will learn the fundamental of TensorFlow 2 for use cases in some of the most popular and challenging domains of deep learning, which are computer vision, natural language processing, and time series data.
+
+This book is designed for beginners who want to learn TensorFlow 2 from scratch by practicing the techniques on practical examples and projects. Whether you are new to TensorFlow or have some experience with it, this book will help you master the essential skills and concepts you need to create effective solutions for real-world problems. Nevertheless, you are assumed to have some backgrounds in Python programming. Each chapter provides a brief introduction to the theory behind each technique, followed by a step-by-step guide on how to implement it using TensorFlow 2, Keras, and other relevant libraries.
+
+By the end of this book, you will have a solid foundation in TensorFlow 2 and deep learning, and you will be able to use your skills and knowledge to create your own projects or advance your career in this exciting and fast-growing field.
+
+### Collaboration
+
+This book is **currently under development**. The 1source code for this website is available on [GitHub](https://github.com/hanzholahs/tensorflow-for-deep-learning). We welcome any contributions or feedback from other developers who are interested in this project. If you find any errors or typos, please feel free to open an issue or a pull request. Thank you for your support and collaboration.
+
+### Authors
+
+1. **Hanzholah Shobri**, a Researcher at Bank Indonesia. He hold a bachelor's degree in Industrial Engineering from Universitas Gadjah Mada, Yogyakarta. (contacts: [email](mailto:hanzholahs@gmail.com), [github](https://github.com/hanzholahs), [twitter](https://twitter.com/hanzholah))
+
+1. **Tria Rahmat Mauludin**, a Researcher at Bank Indonesia. He hold a bachelor's degree in Mathematics from Insitut Teknologi Bandung, Bandung. (contacts: [email](mailto:triarahmatm@gmail.com), [github](https://github.com/triarm))
+
+
+### License
+
+This book is licensed to you under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+The code samples in this book are licensed under [Creative Commons CC0 1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), i.e. public domain.

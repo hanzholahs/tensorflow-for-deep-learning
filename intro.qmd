@@ -1,5 +1,42 @@
 # Introduction {.unnumbered}
 
-This is a book created from markdown and executable code.
+Deep learning is a branch of artificial intelligence that uses neural networks to learn from data and perform certain tasks. Many creative and innnovative solutions to human problems have been solved by deep learning techniques. Hence, the skills to use deep learning in any domain is important in the era where computational capabilty and data availability is continally increasing. This book consists of the application of several key techniques in deep learning to deal with complex data structures.
 
-See @knuth84 for additional discussion of literate programming.
+If you are familiar with Python and want to learn TensorFlow by solving real-world problems, this book is for you. You will learn how to use TensorFlow to build machine learning models for various domains, such as computer vision, natural language processing, and more. You will also get hands-on experience with TensorFlow through case studies and practical examples that show you how to apply the concepts and techniques in your own projects. Every relevant concept is introduced gradually, so it is recommended to read the book from the first chapter to the end.
+
+
+### The concepts of Artificial Intelligence, Machine Learning, and Deep Learning
+
+To understand what deep learning is, we need to also look at the definition of machine learning and deep learning. In principle, deep learning is a subset of machine learning, and machine learning is a subset of artificial intelligence.
+
+Artificial intelligence (AI) is a broad term that refers to any system or software that can perform tasks that normally require human intelligence, such as reasoning, decision making, problem solving, natural language processing, and computer vision. Machine learning (ML) is a subset of AI that focuses on creating systems or software that can learn patterns or rules from data and improve their performance without explicit programming or human intervention. 
+
+Deep learning (DL) is a subset of ML that uses artificial neural networks (ANNs) to model complex and nonlinear relationships between inputs and outputs. In contrast to traditional machine learning that requires manual feature engineering to extract relevant information, deep learning uses multiple intermediate representations of the data to extract features automatically from raw data.
+
+An illustration by Data Iku on the relationship between AI, ML, and DL is presented below.
+
+![DL is a subset of ML, and ML is a subset of AI](https://blog.dataiku.com/hs-fs/hubfs/AI-ML-DL-graphic.png?width=810&name=AI-ML-DL-graphic.png)
+
+
+### An Introduction to TensorFlow 2.0 and Keras Libraries
+
+Tensorflow 2 and Keras are two powerful frameworks for building and deploying machine learning solutions, especially for deep learning. Tensorflow 2 is the premier open-source platform for developing, training, and deploying deep learning models at scale. Keras is the high-level API of Tensorflow 2, which provides an easy and intuitive way to design, fit, evaluate, and use deep learning models with just a few lines of code.
+
+Tensorflow 2 and Keras have many advantages over other frameworks, such as:
+
+- They support multiple backends, devices, and languages, allowing you to run your code on CPUs, GPUs, TPUs, and even mobile devices.
+- They offer a rich set of tools and libraries for data processing, visualization, debugging, optimization, and deployment.
+- They enable you to use both the sequential and functional APIs to create simple or complex models with different architectures and layers.
+- They allow you to leverage the power of custom layers, custom training loops, custom callbacks, and custom metrics to customize your model according to your needs.
+- They integrate seamlessly with other popular libraries and frameworks, such as NumPy, SciPy, Pandas, Scikit-learn, PyTorch, and more.
+
+Tensorflow 2 and Keras are not only frameworks but also communities of developers, researchers, and practitioners who share their knowledge and experience through blogs, tutorials, books, courses, forums, and events. By using Tensorflow 2 and Keras, you can join this vibrant community and learn from the best in the field.
+
+
+### How Will You Learn Deep Learning by Using This Book?
+
+This book exclusively uses TensorFlow 2, as well as its high-level API or Keras, to build and train a deep learning model. Other libraries are also used for preparing the data or making visualisation. To practice with the code in this book, readers could access the source notebook or copy and paste each code manually. There are three parts of the book. 
+
+* **Part 1: Basic Usage of TensorFlow 2**. This part contains the basic workflow to build a model that is used in this book and how to implement TensorFlow 2 according to the workflow for regression and classification problems using dummy data. 
+* **Part 2: Use Cases of TensorFlow 2**. This part demonstrates several applications of some important techniques in machine learning and TensorFlow 2 to four use cases using datasets provided by TensorFlow 2 library.
+* **Part 3: Preparing Data for TensorFlow 2**. This part goes beyond built-in dataset and shows how to handle messy, real-world data in different formats (images, texts, and time series data) into inputs for TensorFlow 2 deep learning models.
