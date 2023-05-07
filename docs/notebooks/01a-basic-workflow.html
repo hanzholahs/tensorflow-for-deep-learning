@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Deep Learning with TensorFlow 2 - 1&nbsp; General Workflow for This Book</title>
+<title>Deep Learning with TensorFlow 2 - 1&nbsp; General Idea of Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Basic Usage of TensorFlow 2</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true"><span style="font-weight: bold; color: #555555">Getting Started with TensorFlow 2</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></a>
+  <a href="../notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -193,14 +193,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#machine-learning-problems" id="toc-machine-learning-problems" class="nav-link active" data-scroll-target="#machine-learning-problems"><span class="toc-section-number">1.1</span>  Machine Learning Problems</a></li>
+  <li><a href="#the-workflow" id="toc-the-workflow" class="nav-link" data-scroll-target="#the-workflow"><span class="toc-section-number">1.2</span>  The Workflow</a></li>
+  <li><a href="#the-limitations-of-the-techniques" id="toc-the-limitations-of-the-techniques" class="nav-link" data-scroll-target="#the-limitations-of-the-techniques"><span class="toc-section-number">1.3</span>  The Limitations of the Techniques</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Workflow for This Book</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></h1>
 </div>
 
 
@@ -215,21 +223,44 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. In this blog post, we will explore the typical workflow of a deep learning project, and discuss some of the relevant libraries, tools and techniques that can help you along the way.</p>
-<p>The deep learning workflow has seven primary components:</p>
+<p>Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. Deep learning, as previously illustrated, is a part of machine learning that leverages multiple layers of representations of data for making predictions on a given input data. Therefore, there are some concepts that are also applied when someone want to use deep learning models. This chapter describes the different types of machine learning problems and the sequences on how to solve the problems. Some limitations of machine learning as well as deep learning methods are also discussed.</p>
+<section id="machine-learning-problems" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="machine-learning-problems"><span class="header-section-number">1.1</span> Machine Learning Problems</h2>
+<p>For developers, data scientists, or researchers, machine learning techniques offer them with the capability to handle complex problems by training a mathematical model that can extract some rules or patterns within a sample and use those to generate some predictions. This usually goes beyond the traditional statistical methods that was invented to deal with a smaller amount of data. The main goal here is to achieve the optimal result when the model is deployed in real-world situation, i.e., the model has to be able to predict samples that are not used for the training process. It is important to understand different approaches in machine learning problems.</p>
+<p>Machine Learning problems can generally be classified into three, namely supervised learning, unsupervised learning, and reinforcement learning.</p>
+<ul>
+<li>In a <strong>supervised learning</strong>, the model usually is given a dataset containing sets of feature data and its label. The system is trained in order to learn a mapping rules of the inputs to the respective outputs so that it can infer the label of a new, previously-unseen observations.</li>
+<li>In <strong>unsupervised learning</strong>, the model processes raw data that is neither labeled nor tagged by human. The purpose of this type of problem is to find hidden patterns or structure in the data.</li>
+<li>In <strong>reinforcement learning</strong>, the model is trained to be the brain of an independent agent which interact with certain environment by performing some actions, observing the impacts of its actions in the environment, and receiving reward or penalties based on its actions.</li>
+</ul>
+<p>One thing to note is that sometimes the lines between these types of problem can be blurry. For example, one can deal with data that is half unlabeled and half labeled in a semi-supervised learning which is a mixture of both supervised and unsupervised learning.</p>
+<p>This book discusses several use cases of deep learning in different applications, including in natural language processing, computer vision, and time series analysis. However, each use case is supervised learning where the model is trained using labeled input data and used to predict new dataset. Specifically, all techniques learned in this book is used for either regression or classification problems. <strong>Regression</strong> is a type of problem where the model needs to predict continuous, numerical data whereas, for <strong>classification</strong> problem, the model has to infer categorical label of the data.</p>
+</section>
+<section id="the-workflow" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-workflow"><span class="header-section-number">1.2</span> The Workflow</h2>
+<p>The workflow when using deep learning is iterative and dynamic that requires a lot of experimentation and creativity. In this book, there is a certain workflow used to train and evaluate a deep learning model. The general steps are also used in building other traditional machine learning models. The workflow has seven primary components.</p>
 <ol type="1">
-<li><strong>Acquiring data</strong>: This is the first and often the most challenging step of a deep learning project. You need to collect enough labeled data for your task, or use existing datasets that are publicly available or stored in databases. You can also use web scraping or APIs to gather data from online sources, or crowd-source labeling for unlabeled data.</li>
-<li><strong>Preprocessing</strong>: This step involves cleaning, transforming and organizing your data to make it suitable for your model. You may need to resize, crop, rotate, augment or normalize your images; tokenize, lemmatize, stem or vectorize your text; encode, scale, impute or standardize your numerical data; and so on. You can use libraries like NumPy, Pandas, OpenCV, PIL, NLTK or Scikit-learn for preprocessing tasks.</li>
-<li><strong>Splitting and balancing the dataset</strong>: This step involves dividing your data into training, validation and test sets. The training set is used to fit the model to the data; the validation set is used to tune the hyperparameters and select the best model; and the test set is used to evaluate the final performance of the model. You should also ensure that your dataset is balanced, meaning that it has roughly equal proportions of different classes or categories. You can use Scikit-learn’s train_test_split function or TensorFlow’s tf.data API for splitting and balancing your dataset.</li>
-<li><strong>Defining model architecture</strong>: This step involves designing the structure and layers of your neural network. You can use existing architectures that have been proven to work well for similar tasks, such as CNNs for image classification, RNNs for natural language processing, GANs for image generation, etc. You can also modify or customize these architectures to suit your specific needs. You can use libraries like TensorFlow, Keras, PyTorch or MXNet for defining your model architecture.</li>
-<li><strong>Fitting model to data</strong>: This step involves training your model on the training set using an optimization algorithm such as gradient descent. You need to specify the loss function that measures how well your model fits the data, and the metrics that evaluate how well your model performs on the validation set. You also need to choose the learning rate, batch size, number of epochs and other hyperparameters that affect the speed and quality of training. You can use libraries like TensorFlow, Keras, PyTorch or MXNet for fitting your model to data.</li>
-<li><strong>Making predictions</strong>: This step involves using your trained model to make predictions on new or unseen data. You can use your model to classify images, generate text, translate languages, detect objects, etc. depending on your task. You can use libraries like TensorFlow, Keras, PyTorch or MXNet for making predictions.</li>
-<li><strong>Evaluating results</strong>: This step involves measuring how well your model performs on the test set using various metrics such as accuracy, precision, recall, F1-score, ROC curve, etc. depending on your task. You can also compare your results with existing benchmarks or state-of-the-art models to see how you fare against them. You can use libraries like Scikit-learn, TensorFlow or PyTorch for evaluating results.</li>
-<li><strong>Model optimization</strong>: This step involves improving your model by fine-tuning the hyperparameters, adding regularization techniques such as dropout or batch normalization, pruning unnecessary weights or layers, etc. You can also use techniques such as transfer learning or meta-learning to leverage existing knowledge or learn from multiple tasks. You can use libraries like TensorFlow Hub or PyTorch Lightning for model optimization.</li>
+<li><strong>Acquiring data</strong>: Either collecting by yourself or using existing data, you needs relevant data to solve your business problems. This is typically one of the most important and prone-to-error step in a project. In this book, all data are acquired using publicly available datasets.</li>
+<li><strong>Preprocessing</strong>: This step involves cleaning, transforming and organizing your data to make it suitable for your model. More in-depth methods in preprocessing different data types are demonstrated in the Part 3 of this book.</li>
+<li><strong>Splitting and balancing the dataset</strong>: Depending on how you approach a problem, in many occasions you might want to separate a subset of available data to function as the test set. Test dataset is a subset used for evaluating the performance of a trained model. Another important subset is the validation set which is used, for instance, to tune hyperparameters or to observere the performance of a model throughout the training process.</li>
+<li><strong>Defining model architecture</strong>: For deep learning model, defining model might be arbitrary, but this process can influence the results of the project. In many times, one needs to redefine the architecture iteratively by altering the structure and layers of the neural network in order to achieve the highest performance.</li>
+<li><strong>Fitting model to data</strong>: This step involves training your model on the training set. You need to specify a loss function that measures how well your model fits the data and select the optimizer that will determines how the model’s parameters are adjusted. In addition, you may want to use particular metrics to evaluate the model performance on the validation set.</li>
+<li><strong>Making predictions</strong>: This is the step when you use your trained model to make predictions on new or unseen data. In this step, developers typically measure how well the model performs on the test set using some metrics such as mean squeared error, accuracy, F1-score, and ROC curve.</li>
+<li><strong>Model optimization</strong>: This is intended to improve the model by fine-tuning the hyperparameters, adding regularization techniques such as dropout or batch normalization.</li>
 </ol>
-<p>As you can see, deep learning workflow is an iterative and dynamic process that requires a lot of experimentation and creativity. However, by following these steps and using these libraries and tools, you can make your deep learning project more productive, reproducible and understandable.</p>
+</section>
+<section id="the-limitations-of-the-techniques" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-limitations-of-the-techniques"><span class="header-section-number">1.3</span> The Limitations of the Techniques</h2>
+<p>Machine learning is proven to help many organisations from different industries make better decisions based on insights from data such as the cases in detecting frauds in financial transactions or predicting cancer from medical x-rays. However, it is not a one-for-all solution as there are use cases when using machine learning will not help achieve the best result or is a waste of time. Careful consideration is taken place before actually applying the technique to the problem.</p>
+<p>It is important for individuals or institutions to understand the limitations of the technique to decide whether it is the most appropriate approach. Some of the limitations of Machine learning include:</p>
+<ul>
+<li>It usually needs a significant amount of data in order to learn effectively, especially if you want to train a deep learning model.</li>
+<li>The performance of a model heavily depends on the data it is trained, meaning potential bias might be hard to detect. Overfitting is a common pitfall in machine learning where the model is to specialised in the training data and performs unreliably on test dataset.</li>
+<li>As some techniques of machine learning, including the artificial neural network, is a black box system, the underlying insights behind the trained model can be hard, or even impossible, to understand. This is also a reason why some techniques are specifically designed for predictions, while others are used for inference.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
