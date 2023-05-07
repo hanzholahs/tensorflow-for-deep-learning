@@ -9,7 +9,7 @@ By the end of this book, you will have a solid foundation in TensorFlow 2 and de
 
 ### Collaboration
 
-This book is **currently under development**. The 1source code for this website is available on [GitHub](https://github.com/hanzholahs/tensorflow-for-deep-learning). We welcome any contributions or feedback from other developers who are interested in this project. If you find any errors or typos, please feel free to open an issue or a pull request. Thank you for your support and collaboration.
+This book is **currently under development**. The source code for this website is available on [GitHub](https://github.com/hanzholahs/tensorflow-for-deep-learning). We welcome any contributions or feedback from other developers who are interested in this project. If you find any errors or typos, please feel free to open an issue or a pull request. Thank you for your support and collaboration.
 
 ### Authors
 
