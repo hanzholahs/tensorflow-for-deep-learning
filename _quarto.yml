@@ -7,7 +7,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - part: "[Basic Usage of TensorFlow 2]{style=\"font-weight: bold; color: #555555\"}"
+    - part: "[Getting Started with TensorFlow 2]{style=\"font-weight: bold; color: #555555\"}"
       chapters:
         - notebooks/01a-basic-workflow.qmd
         - notebooks/01b-basic-regression.ipynb
