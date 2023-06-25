@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Deep Learning with TensorFlow 2 - 1&nbsp; General Idea of Machine Learning</title>
+<title>Deep Learning with TensorFlow 2 (DRAFT) - 1&nbsp; General Idea</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Deep Learning with TensorFlow 2</a> 
+      <a href="../">Deep Learning with TensorFlow 2 (DRAFT)</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -113,17 +113,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></a>
+  <a href="../notebooks/01a-basic-workflow.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01b-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></a>
+  <a href="../notebooks/01b-basic-regression.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/01c-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dealing with Classification Problems</span></a>
+  <a href="../notebooks/01c-basic-classification.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classification</span></a>
   </div>
 </li>
       </ul>
@@ -197,9 +197,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#machine-learning-problems" id="toc-machine-learning-problems" class="nav-link active" data-scroll-target="#machine-learning-problems"><span class="toc-section-number">1.1</span>  Machine Learning Problems</a></li>
-  <li><a href="#the-workflow" id="toc-the-workflow" class="nav-link" data-scroll-target="#the-workflow"><span class="toc-section-number">1.2</span>  The Workflow</a></li>
-  <li><a href="#the-limitations-of-the-techniques" id="toc-the-limitations-of-the-techniques" class="nav-link" data-scroll-target="#the-limitations-of-the-techniques"><span class="toc-section-number">1.3</span>  The Limitations of the Techniques</a></li>
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link active" data-scroll-target="#machine-learning"><span class="toc-section-number">1.1</span>  Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#types-of-problems" id="toc-types-of-problems" class="nav-link" data-scroll-target="#types-of-problems"><span class="toc-section-number">1.1.1</span>  Types of problems</a></li>
+  <li><a href="#the-roles-of-data" id="toc-the-roles-of-data" class="nav-link" data-scroll-target="#the-roles-of-data"><span class="toc-section-number">1.1.2</span>  The roles of data</a></li>
+  </ul></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning"><span class="toc-section-number">1.2</span>  Deep Learning</a>
+  <ul class="collapse">
+  <li><a href="#components-of-deep-learning" id="toc-components-of-deep-learning" class="nav-link" data-scroll-target="#components-of-deep-learning"><span class="toc-section-number">1.2.1</span>  Components of deep learning</a></li>
+  <li><a href="#traditional-machine-learning-vs-deep-learning" id="toc-traditional-machine-learning-vs-deep-learning" class="nav-link" data-scroll-target="#traditional-machine-learning-vs-deep-learning"><span class="toc-section-number">1.2.2</span>  Traditional machine learning vs deep learning</a></li>
+  <li><a href="#deep-learning-limitation" id="toc-deep-learning-limitation" class="nav-link" data-scroll-target="#deep-learning-limitation"><span class="toc-section-number">1.2.3</span>  Deep learning limitation</a></li>
+  </ul></li>
+  <li><a href="#model-training-and-evaluation" id="toc-model-training-and-evaluation" class="nav-link" data-scroll-target="#model-training-and-evaluation"><span class="toc-section-number">1.3</span>  Model Training and Evaluation</a></li>
   </ul>
 </nav>
     </div>
@@ -208,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea of Machine Learning</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">General Idea</span></h1>
 </div>
 
 
@@ -223,10 +232,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. Deep learning, as previously illustrated, is a part of machine learning that leverages multiple layers of representations of data for making predictions on a given input data. Therefore, there are some concepts that are also applied when someone want to use deep learning models. This chapter describes the different types of machine learning problems and the sequences on how to solve the problems. Some limitations of machine learning as well as deep learning methods are also discussed.</p>
-<section id="machine-learning-problems" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="machine-learning-problems"><span class="header-section-number">1.1</span> Machine Learning Problems</h2>
-<p>For developers, data scientists, or researchers, machine learning techniques offer them with the capability to handle complex problems by training a mathematical model that can extract some rules or patterns within a sample and use those to generate some predictions. This usually goes beyond the traditional statistical methods that was invented to deal with a smaller amount of data. The main goal here is to achieve the optimal result when the model is deployed in real-world situation, i.e., the model has to be able to predict samples that are not used for the training process. It is important to understand different approaches in machine learning problems.</p>
+<!-- This chapter describes the different types of machine learning problems and the sequences on how to solve the problems. Some limitations of machine learning as well as deep learning methods are also discussed. -->
+<section id="machine-learning" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="machine-learning"><span class="header-section-number">1.1</span> Machine Learning</h2>
+<p>For developers, data scientists, or researchers, machine learning techniques offer them with the capability to handle complex problems by training a mathematical model that can extract some rules or patterns within a sample and use those to generate some predictions. This usually goes beyond the traditional statistical methods that deals with a smaller amount of data.</p>
+<p>In machine learning, the learning process revolves around fitting a model to a dataset that consists of input data and corresponding desired outputs, known as labels. During training, the model learns patterns and relationships within the data, allowing it to generalize and make predictions on, samples beyond the information provided in the training process, new, unseen data.</p>
+<section id="types-of-problems" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="types-of-problems"><span class="header-section-number">1.1.1</span> Types of problems</h3>
 <p>Machine Learning problems can generally be classified into three, namely supervised learning, unsupervised learning, and reinforcement learning.</p>
 <ul>
 <li>In a <strong>supervised learning</strong>, the model usually is given a dataset containing sets of feature data and its label. The system is trained in order to learn a mapping rules of the inputs to the respective outputs so that it can infer the label of a new, previously-unseen observations.</li>
@@ -236,8 +248,44 @@ ul.task-list li input[type="checkbox"] {
 <p>One thing to note is that sometimes the lines between these types of problem can be blurry. For example, one can deal with data that is half unlabeled and half labeled in a semi-supervised learning which is a mixture of both supervised and unsupervised learning.</p>
 <p>This book discusses several use cases of deep learning in different applications, including in natural language processing, computer vision, and time series analysis. However, each use case is supervised learning where the model is trained using labeled input data and used to predict new dataset. Specifically, all techniques learned in this book is used for either regression or classification problems. <strong>Regression</strong> is a type of problem where the model needs to predict continuous, numerical data whereas, for <strong>classification</strong> problem, the model has to infer categorical label of the data.</p>
 </section>
-<section id="the-workflow" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="the-workflow"><span class="header-section-number">1.2</span> The Workflow</h2>
+<section id="the-roles-of-data" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="the-roles-of-data"><span class="header-section-number">1.1.2</span> The roles of data</h3>
+<p>Machine learning models use data as the building blocks that enable models to learn hidden patterns and make accurate predictions. High-quality and relevant data is crucial for the success of any machine learning. The more diverse, representative, and comprehensive the data, the better the model’s ability to generalize and make accurate predictions. Data is represented in many different forms such as numbers, texts, images, and recordings.</p>
+<p>It is the job of the developers to ensure the model can learn meaningful patterns and generalise to previously unseen data. This is done by carefully performing data preparation and feature engineering so that the model can be trained on high quality input. <strong>Data preparation</strong> refers to a series of steps and techniques applied to raw data before it is used for analysis or model training. It is a crucial task as real-world data often contains noise, missing values, inconsistencies, outliers, or irrelevant information that can adversely affect the performance and accuracy of machine learning models. Effective <strong>feature engineering</strong> is the process of selecting, transforming, and creating meaningful features that capture the underlying patterns and relationships in the data. Good features should have predictive power and be informative for the task at hand. The choice and quality of features significantly impact the performance of a machine learning model.</p>
+<p>When building a model, it is often that not all data is used for training and some portion of it is used to represent unseen data in the evaluation process. There are different techniques that can be applied, and the simplest way to do this is to separate between data for training and testing. The parameters of the model are updated based on how the model perform on the <strong>training dataset</strong>, while the overall performance of the model is calculated using some metrics using the <strong>testing dataset</strong>.</p>
+</section>
+</section>
+<section id="deep-learning" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="deep-learning"><span class="header-section-number">1.2</span> Deep Learning</h2>
+<p>Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. Deep learning, as previously illustrated, is a part of machine learning that leverages multiple layers to learn representations of data hierarchically to make predictions on a given input data. Therefore, there are some concepts that are also applied when someone want to use deep learning models.</p>
+<section id="components-of-deep-learning" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="components-of-deep-learning"><span class="header-section-number">1.2.1</span> Components of deep learning</h3>
+<!-- An introduction to basic neural networks structure -->
+<p>Inspired by the structure and functioning of the human brain, deep learning aims to mimic the way neurons process and transmit information using artificial neural networks. The networks consist of interconnected nodes called neurons, which are organized into layers. There are three main layers in a basic neural network: the input layer, the hidden layer(s), and the output layer. The input layer receives the initial data, which is then processed through the hidden layer(s) before producing the final output in the output layer. This sophisticated structure allows neural networks to learn complex patterns and make predictions.</p>
+<p>Each neuron works by taking in inputs, applying weights and biases to them, performing a mathematical operation, and then passing the result to the next layer. A neuron receives <strong>inputs</strong> from other neurons or external sources. Each input is associated with a weight, which represents the strength or importance of that input. The neuron computes the weighted sum of its inputs by multiplying each input with its corresponding <strong>weight</strong> and summing them together. Neurons often have an additional parameter called <strong>bias</strong> to provide an offset when all inputs are zero. This computation represents the integration of information from multiple sources. The weighted sum is then passed through an <strong>activation function</strong>. The activation function introduces non-linearity and determines the output of the neuron. It can either be a simple threshold function or a more complex function like sigmoid, ReLU, or tanh. The output of the activation function becomes the <strong>output</strong> of the neuron. It can be passed as input to other neurons in subsequent layers or used as the final output of the neural network.</p>
+<!-- The weights in the network are adjusted during the training process to optimize the network's performance.  -->
+<!-- The use of visual representations, such as diagrams or images, can help in visualizing the connections and flow of information within a neural network, aiding in understanding its structure and functionality. -->
+<p><strong>Backpropagation</strong> is a key algorithm used to train neural networks. It works by adjusting the weights of the connections between neurons to minimize the difference between the network’s predicted output and the desired output. Backpropagation uses a technique called <strong>gradient descent</strong>, which calculates the gradient of the loss function with respect to the network’s weights. This gradient is then used to update the weights iteratively, allowing the network to learn from its mistakes and improve its performance.</p>
+</section>
+<section id="traditional-machine-learning-vs-deep-learning" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="traditional-machine-learning-vs-deep-learning"><span class="header-section-number">1.2.2</span> Traditional machine learning vs deep learning</h3>
+<!-- A comparison of traditional machine learning vs deep learning -->
+<p>Traditional machine learning algorithms are generally rule-based systems that rely on explicit feature engineering. These algorithms require human experts to handcraft relevant features from the data, which are then used to train the models. Traditional machine learning techniques excel in scenarios where the data has a limited number of features and the problem at hand can be represented effectively by these engineered features. In contrast, deep learning, which uses multiple layers of interconnected nodes, can automatically learn intricate patterns and representations from raw data, eliminating the need for explicit feature engineering. Deep learning models are particularly effective when dealing with unstructured, high-dimensional data, such as images, audio, and text.</p>
+<p>One advantage of traditional machine learning approaches is their interpretability. Since the features are explicitly engineered, it is easier to understand how the model arrives at its predictions. This interpretability can be crucial in domains where explanations and justifications are required. On the other hand, deep learning models often function as black boxes, making it challenging to discern the exact reasoning behind their decisions even though they can discover intricate patterns that may be missed by traditional machine learning techniques. It is important to assess the problems before deciding which technique to use.</p>
+</section>
+<section id="deep-learning-limitation" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="deep-learning-limitation"><span class="header-section-number">1.2.3</span> Deep learning limitation</h3>
+<!-- Limitation of deep learning model -->
+<p>Deep learning is proven to help many organisations from different industries make better decisions based on insights from data such as the cases in detecting frauds in financial transactions or predicting cancer from medical x-rays. Nonetheless, it is not a one-for-all solution as there are use cases when using this technique will not help achieve the best result or is a waste of time. Some of the limitations of deep learning include:</p>
+<ul>
+<li>It usually needs a significant amount of data in order to learn effectively, especially if you want to train a deep learning model.</li>
+<li>The performance of a model heavily depends on the data it is trained, meaning potential bias might be hard to detect. Overfitting is a common pitfall in machine learning where the model is to specialised in the training data and performs unreliably on test dataset.</li>
+<li>As some techniques of machine learning, including the artificial neural network, is a black box system, the underlying insights behind the trained model can be hard, or even impossible, to understand. This is also a reason why some techniques are specifically designed for predictions, while others are used for inference.</li>
+</ul>
+</section>
+</section>
+<section id="model-training-and-evaluation" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="model-training-and-evaluation"><span class="header-section-number">1.3</span> Model Training and Evaluation</h2>
 <p>The workflow when using deep learning is iterative and dynamic that requires a lot of experimentation and creativity. In this book, there is a certain workflow used to train and evaluate a deep learning model. The general steps are also used in building other traditional machine learning models. The workflow has seven primary components.</p>
 <ol type="1">
 <li><strong>Acquiring data</strong>: Either collecting by yourself or using existing data, you needs relevant data to solve your business problems. This is typically one of the most important and prone-to-error step in a project. In this book, all data are acquired using publicly available datasets.</li>
@@ -248,16 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Making predictions</strong>: This is the step when you use your trained model to make predictions on new or unseen data. In this step, developers typically measure how well the model performs on the test set using some metrics such as mean squeared error, accuracy, F1-score, and ROC curve.</li>
 <li><strong>Model optimization</strong>: This is intended to improve the model by fine-tuning the hyperparameters, adding regularization techniques such as dropout or batch normalization.</li>
 </ol>
-</section>
-<section id="the-limitations-of-the-techniques" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="the-limitations-of-the-techniques"><span class="header-section-number">1.3</span> The Limitations of the Techniques</h2>
-<p>Machine learning is proven to help many organisations from different industries make better decisions based on insights from data such as the cases in detecting frauds in financial transactions or predicting cancer from medical x-rays. However, it is not a one-for-all solution as there are use cases when using machine learning will not help achieve the best result or is a waste of time. Careful consideration is taken place before actually applying the technique to the problem.</p>
-<p>It is important for individuals or institutions to understand the limitations of the technique to decide whether it is the most appropriate approach. Some of the limitations of Machine learning include:</p>
-<ul>
-<li>It usually needs a significant amount of data in order to learn effectively, especially if you want to train a deep learning model.</li>
-<li>The performance of a model heavily depends on the data it is trained, meaning potential bias might be hard to detect. Overfitting is a common pitfall in machine learning where the model is to specialised in the training data and performs unreliably on test dataset.</li>
-<li>As some techniques of machine learning, including the artificial neural network, is a black box system, the underlying insights behind the trained model can be hard, or even impossible, to understand. This is also a reason why some techniques are specifically designed for predictions, while others are used for inference.</li>
-</ul>
+<p>The processes of training a deep learning model and evaluate its performance on two different problems (regression and classificastion) are discussed in the subsequent chapters.</p>
 
 
 </section>
@@ -404,7 +443,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../notebooks/01b-basic-regression.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dealing with Regression Problems</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regression</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
