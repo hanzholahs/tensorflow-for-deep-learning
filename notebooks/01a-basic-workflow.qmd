@@ -1,14 +1,19 @@
 ---
-title: "General Idea of Machine Learning"
+title: "General Idea"
 draft: false
 freeze: true
 ---
 
-Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. Deep learning, as previously illustrated, is a part of machine learning that leverages multiple layers of representations of data for making predictions on a given input data. Therefore, there are some concepts that are also applied when someone want to use deep learning models. This chapter describes the different types of machine learning problems and the sequences on how to solve the problems. Some limitations of machine learning as well as deep learning methods are also discussed.
+<!-- This chapter describes the different types of machine learning problems and the sequences on how to solve the problems. Some limitations of machine learning as well as deep learning methods are also discussed. -->
 
-## Machine Learning Problems
+## Machine Learning
 
-For developers, data scientists, or researchers, machine learning techniques offer them with the capability to handle complex problems by training a mathematical model that can extract some rules or patterns within a sample and use those to generate some predictions. This usually goes beyond the traditional statistical methods that was invented to deal with a smaller amount of data. The main goal here is to achieve the optimal result when the model is deployed in real-world situation, i.e., the model has to be able to predict samples that are not used for the training process. It is important to understand different approaches in machine learning problems.
+For developers, data scientists, or researchers, machine learning techniques offer them with the capability to handle complex problems by training a mathematical model that can extract some rules or patterns within a sample and use those to generate some predictions. This usually goes beyond the traditional statistical methods that deals with a smaller amount of data. 
+
+In machine learning, the learning process revolves around fitting a model to a dataset that consists of input data and corresponding desired outputs, known as labels. During training, the model learns patterns and relationships within the data, allowing it to generalize and make predictions on, samples beyond the information provided in the training process, new, unseen data.
+
+
+### Types of problems
 
 Machine Learning problems can generally be classified into three, namely supervised learning, unsupervised learning, and reinforcement learning.
 
@@ -16,13 +21,57 @@ Machine Learning problems can generally be classified into three, namely supervi
 - In **unsupervised learning**, the model processes raw data that is neither labeled nor tagged by human. The purpose of this type of problem is to find hidden patterns or structure in the data. 
 - In **reinforcement learning**, the model is trained to be the brain of an independent agent which interact with certain environment by performing some actions, observing the impacts of its actions in the environment, and receiving reward or penalties based on its actions. 
 
-
-One thing to note is that sometimes the lines between these types of problem can be blurry. For example, one can deal with data that is half unlabeled and half labeled in a semi-supervised learning which is a mixture of both supervised and unsupervised learning.
+One thing to note is that sometimes the lines between these types of problem can be blurry. For example, one can deal with data that is half unlabeled and half labeled in a semi-supervised learning which is a mixture of both supervised and unsupervised learning. 
 
 This book discusses several use cases of deep learning in different applications, including in natural language processing, computer vision, and time series analysis. However, each use case is supervised learning where the model is trained using labeled input data and used to predict new dataset. Specifically, all techniques learned in this book is used for either regression or classification problems. **Regression** is a type of problem where the model needs to predict continuous, numerical data whereas, for **classification** problem, the model has to infer categorical label of the data.
 
 
-## The Workflow    
+### The roles of data
+Machine learning models use data as the building blocks that enable models to learn hidden patterns and make accurate predictions. High-quality and relevant data is crucial for the success of any machine learning. The more diverse, representative, and comprehensive the data, the better the model's ability to generalize and make accurate predictions. Data is represented in many different forms such as numbers, texts, images, and recordings. 
+
+It is the job of the developers to ensure the model can learn meaningful patterns and generalise to previously unseen data. This is done by carefully performing data preparation and feature engineering so that the model can be trained on high quality input. **Data preparation** refers to a series of steps and techniques applied to raw data before it is used for analysis or model training. It is a crucial task as real-world data often contains noise, missing values, inconsistencies, outliers, or irrelevant information that can adversely affect the performance and accuracy of machine learning models. Effective **feature engineering** is the process of selecting, transforming, and creating meaningful features that capture the underlying patterns and relationships in the data. Good features should have predictive power and be informative for the task at hand. The choice and quality of features significantly impact the performance of a machine learning model.
+
+When building a model, it is often that not all data is used for training and some portion of it is used to represent unseen data in the evaluation process. There are different techniques that can be applied, and the simplest way to do this is to separate between data for training and testing. The parameters of the model are updated based on how the model perform on the **training dataset**, while the overall performance of the model is calculated using some metrics using the **testing dataset**. 
+
+
+## Deep Learning
+
+Deep learning is a powerful and popular branch of machine learning that uses neural networks to learn from data and perform complex tasks. Deep learning, as previously illustrated, is a part of machine learning that leverages multiple layers to learn representations of data hierarchically to make predictions on a given input data. Therefore, there are some concepts that are also applied when someone want to use deep learning models. 
+
+
+### Components of deep learning
+<!-- An introduction to basic neural networks structure -->
+
+Inspired by the structure and functioning of the human brain, deep learning aims to mimic the way neurons process and transmit information using artificial neural networks. The networks consist of interconnected nodes called neurons, which are organized into layers. There are three main layers in a basic neural network: the input layer, the hidden layer(s), and the output layer. The input layer receives the initial data, which is then processed through the hidden layer(s) before producing the final output in the output layer. This sophisticated structure allows neural networks to learn complex patterns and make predictions. 
+
+Each neuron  works by taking in inputs, applying weights and biases to them, performing a mathematical operation, and then passing the result to the next layer. A neuron receives **inputs** from other neurons or external sources. Each input is associated with a weight, which represents the strength or importance of that input. The neuron computes the weighted sum of its inputs by multiplying each input with its corresponding **weight** and summing them together. Neurons often have an additional parameter called **bias** to provide an offset when all inputs are zero. This computation represents the integration of information from multiple sources. The weighted sum is then passed through an **activation function**. The activation function introduces non-linearity and determines the output of the neuron. It can either be a simple threshold function or a more complex function like sigmoid, ReLU, or tanh. The output of the activation function becomes the **output** of the neuron. It can be passed as input to other neurons in subsequent layers or used as the final output of the neural network.
+
+<!-- The weights in the network are adjusted during the training process to optimize the network's performance.  -->
+
+<!-- The use of visual representations, such as diagrams or images, can help in visualizing the connections and flow of information within a neural network, aiding in understanding its structure and functionality. -->
+
+**Backpropagation** is a key algorithm used to train neural networks. It works by adjusting the weights of the connections between neurons to minimize the difference between the network's predicted output and the desired output. Backpropagation uses a technique called **gradient descent**, which calculates the gradient of the loss function with respect to the network's weights. This gradient is then used to update the weights iteratively, allowing the network to learn from its mistakes and improve its performance.
+
+
+
+### Traditional machine learning vs deep learning
+<!-- A comparison of traditional machine learning vs deep learning -->
+
+Traditional machine learning algorithms are generally rule-based systems that rely on explicit feature engineering. These algorithms require human experts to handcraft relevant features from the data, which are then used to train the models. Traditional machine learning techniques excel in scenarios where the data has a limited number of features and the problem at hand can be represented effectively by these engineered features. In contrast, deep learning, which uses multiple layers of interconnected nodes, can automatically learn intricate patterns and representations from raw data, eliminating the need for explicit feature engineering. Deep learning models are particularly effective when dealing with unstructured, high-dimensional data, such as images, audio, and text. 
+
+One advantage of traditional machine learning approaches is their interpretability. Since the features are explicitly engineered, it is easier to understand how the model arrives at its predictions. This interpretability can be crucial in domains where explanations and justifications are required. On the other hand, deep learning models often function as black boxes, making it challenging to discern the exact reasoning behind their decisions even though they can discover intricate patterns that may be missed by traditional machine learning techniques. It is important to assess the problems before deciding which technique to use.
+
+
+### Deep learning limitation
+<!-- Limitation of deep learning model -->
+
+Deep learning is proven to help many organisations from different industries make better decisions based on insights from data such as the cases in detecting frauds in financial transactions or predicting cancer from medical x-rays. Nonetheless, it is not a one-for-all solution as there are use cases when using this technique will not help achieve the best result or is a waste of time. Some of the limitations of deep learning include:
+
+* It usually needs a significant amount of data in order to learn effectively, especially if you want to train a deep learning model. 
+* The performance of a model heavily depends on the data it is trained, meaning potential bias might be hard to detect. Overfitting is a common pitfall in machine learning where the model is to specialised in the training data and performs unreliably on test dataset.
+* As some techniques of machine learning, including the artificial neural network, is a black box system, the underlying insights behind the trained model can be hard, or even impossible, to understand. This is also a reason why some techniques are specifically designed for predictions, while others are used for inference.
+
+## Model Training and Evaluation  
 
 The workflow when using deep learning is iterative and dynamic that requires a lot of experimentation and creativity. In this book, there is a certain workflow used to train and evaluate a deep learning model. The general steps are also used in building other traditional machine learning models. The workflow has seven primary components.
 
@@ -34,13 +83,4 @@ The workflow when using deep learning is iterative and dynamic that requires a l
 6. **Making predictions**: This is the step when you use your trained model to make predictions on new or unseen data. In this step, developers typically measure how well the model performs on the test set using some metrics such as mean squeared error, accuracy, F1-score, and ROC curve.
 7. **Model optimization**: This is intended to improve the model by fine-tuning the hyperparameters, adding regularization techniques such as dropout or batch normalization. 
 
-
-## The Limitations of the Techniques
-
-Machine learning is proven to help many organisations from different industries make better decisions based on insights from data such as the cases in detecting frauds in financial transactions or predicting cancer from medical x-rays. However, it is not a one-for-all solution as there are use cases when using machine learning will not help achieve the best result or is a waste of time. Careful consideration is taken place before actually applying the technique to the problem. 
-
-It is important for individuals or institutions to understand the limitations of the technique to decide whether it is the most appropriate approach. Some of the limitations of Machine learning include:
-
-* It usually needs a significant amount of data in order to learn effectively, especially if you want to train a deep learning model.
-* The performance of a model heavily depends on the data it is trained, meaning potential bias might be hard to detect. Overfitting is a common pitfall in machine learning where the model is to specialised in the training data and performs unreliably on test dataset.
-* As some techniques of machine learning, including the artificial neural network, is a black box system, the underlying insights behind the trained model can be hard, or even impossible, to understand. This is also a reason why some techniques are specifically designed for predictions, while others are used for inference.
+The processes of training a deep learning model and evaluate its performance on two different problems (regression and classificastion) are discussed in the subsequent chapters. 
